@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { addStuApi, editStuByIdApi, getStuByIdApi } from '../api/stuApi';
 
@@ -22,7 +22,7 @@ export function AddOrEdit(props) {
     useEffect(()=> {
         if(id){
             getStuByIdApi(id).then(e => {
-                if(e.status == 200){
+                if(e.status === 200){
                     setStu(e.data)
                 }
             })
@@ -42,7 +42,7 @@ export function AddOrEdit(props) {
         }
         if(id){
             editStuByIdApi(id, stu).then(e => {
-                if(e.status == 200){
+                if(e.status === 200){
                     navigate('/home', {
                         state: {
                             alert: "修改成功",

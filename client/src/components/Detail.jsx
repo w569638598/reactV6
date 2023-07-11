@@ -18,15 +18,17 @@ function Detail() {
     })
     const navigate = useNavigate()
     useEffect(() => {
-        getStuByIdApi(params.id).then(e => {
-            if(e.status == 200){
-                setStu(e.data)
-            }
-        })
+        if (params.id) {
+            getStuByIdApi(params.id).then(e => {
+                if (e.status === 200) {
+                    setStu(e.data)
+                }
+            })
+        }
     }, [])
     function delStu(id) {
         delStuByIdApi(id).then(e => {
-            if(e.status == 200){
+            if (e.status === 200) {
                 navigate('/home', {
                     state: {
                         alert: "删除成功",
