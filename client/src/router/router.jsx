@@ -5,7 +5,7 @@ import {AddOrEdit} from "../components/AddOrEdit";
 import Detail from "../components/Detail";
 import Tel from "../components/Tel";
 import Email from "../components/Email";
-
+import Todo from "../views/todo/Todo";
 
 function Router() {
     return useRoutes([
@@ -38,6 +38,10 @@ function Router() {
         {
             path: "/edit/:id",
             element: <AddOrEdit />
+        },
+        {
+            path: "/todo",
+            element: <Todo />
         },
         {
             path: "/Detail/:id",

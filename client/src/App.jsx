@@ -10,15 +10,16 @@ function App() {
     <div id="app" className="container">
       {/* 导航栏 */}
       <nav className="navbar navbar-expand-lg bg-body-tertiary " data-bs-theme="dark">
-          <div className="container-fluid">
+          <div className="container">
             <button type="button" className="" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span className="sr-only">学生管理系统</span>
             </button>
           </div>
-          <div id="navbar" className="container-fluid">
+          <div id="navbar" className="container">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <NavLink to="/home" className="nav-link">主页</NavLink>
               <NavLink to="/about" className="nav-link">关于我们</NavLink>
+              <NavLink to="/todo" className="nav-link">todo</NavLink>
             </ul>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbar-right">
               <NavLink to="/AddOrEdit" className="nav-link">添加用户</NavLink>
