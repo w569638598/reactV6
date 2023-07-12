@@ -3,7 +3,7 @@ import Input from "./components/input"
 import './css/index.css'
 function Todo(props) {
     return (
-        <div className="container">
+        <div className="todoPage">
             <h1 className="lead" style={{
                 marginBottom: '30px'
             }}>待办事项</h1>
